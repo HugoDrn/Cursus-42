@@ -6,7 +6,7 @@
 /*   By: hderian <hderian@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 20:02:33 by hderian           #+#    #+#             */
-/*   Updated: 2023/10/18 01:19:21 by hderian          ###   ########.fr       */
+/*   Updated: 2023/10/18 02:45:05 by hderian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		*(char*)(dst + i) = *(char*)(src + i);
+		*(char *)(dst + i) = *(char *)(src + i);
 		i++;
 	}
 	return (dst);
