@@ -6,7 +6,7 @@
 /*   By: hderian <hderian@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 21:04:06 by hderian           #+#    #+#             */
-/*   Updated: 2023/10/18 03:16:40 by hderian          ###   ########.fr       */
+/*   Updated: 2023/10/18 04:17:50 by hderian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -270,8 +270,8 @@ char	*ft_strtrim(char const *s1, char const *set);
 /**
  * @brief 
  * Alloue (avec malloc) et renvoie un tableau
- * de chaînes obtenues en divisant les 's' à l'aide de la
- * caractère «c» comme délimiteur. Le tableau doit se terminer
+ * de chaînes obtenues en divisant les `s` à l'aide de la
+ * caractère `«c»` comme délimiteur. Le tableau doit se terminer
  * avec un pointeur NULL.
  * 
  * @param s 
@@ -280,11 +280,59 @@ char	*ft_strtrim(char const *s1, char const *set);
  */
 char	**ft_split(char const *s, char c);
 /**
- * @brief Alloue (avec malloc) et renvoie la chaîne de caractères 
+ * @brief Alloue (avec malloc) et renvoie la `chaîne de caractères` 
  * du nombre passé en argument.
  * 
  * @param n 
  * @return char* 
  */
 char	*ft_itoa(int n);
+/**
+ * @brief Applique la fonction `f` à chaque caractère de 
+ * la chaîne passée en argument
+ * 
+ * @param s 
+ * @param f 
+ * @return char* 
+ */
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+/**
+ * @brief Applique la fonction `f` sur chaque caractère de
+ * la chaîne passée en argument, en passant son index
+ * comme premier argument. Chaque characters est passé par
+ * adresse à `f` à modifier si nécessaire.
+ * 
+ * @param s 
+ * @param f 
+ */
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+/**
+ * @brief Output le caractère `c` sur le `file descriptor` donné.
+ * 
+ * @param c 
+ * @param fd 
+ */
+void	ft_putchar_fd(char c, int fd);
+/**
+ * @brief Output la chaîne `s` sur le `file descriptor` donné.
+ * 
+ * @param s 
+ * @param fd 
+ */
+void	ft_putstr_fd(char *s, int fd);
+/**
+ * @brief Output la chaîne `s` sur le `file descriptor` donné
+ * suivi d'un retour à la ligne.
+ * 
+ * @param s 
+ * @param fd 
+ */
+void	ft_putendl_fd(char *s, int fd);
+/**
+ * @brief Output l'integer `n` sur le `file descriptor` donné.
+ * 
+ * @param n 
+ * @param fd 
+ */
+void	ft_putnbr_fd(int n, int fd);
 #endif
